@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+    <form action="/result" method="get"> 
+    	<div class = "form-group">
+			<label for = "location">Choose location:</label><br>
+			<input name="Location" type="checkbox" value="UD" />U District<br>
+			<input name="Location" type="checkbox" value="UV" />U Villiage<br>
+			<input name="Location" type="checkbox" value="45" />45th st<br>
+			<input name="Location" type="checkbox" value="Bellevue" />Bellevue<br>
+			<input name="Location" type="checkbox" value="CT" />China town<br>
+			<input name="Location" type="checkbox" value="DT" />Downtown
+		</div>
+		<button type="submit" class="btn btn-primary">pick</button>
+	</form>
+{% endblock %}
