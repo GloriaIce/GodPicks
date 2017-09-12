@@ -2,13 +2,21 @@
 {% block content %}
     <form action="/result" method="get"> 
     	<div class = "form-group">
-			<label for = "location">Choose location:</label><br>
-			<input name="Location" type="checkbox" value="UD" />U District<br>
-			<input name="Location" type="checkbox" value="UV" />U Villiage<br>
-			<input name="Location" type="checkbox" value="45" />45th st<br>
-			<input name="Location" type="checkbox" value="Bellevue" />Bellevue<br>
-			<input name="Location" type="checkbox" value="CT" />China town<br>
-			<input name="Location" type="checkbox" value="DT" />Downtown
+			<h2 for = "location">Choose location:</h2><br>
+			<input name="Location" type="checkbox" value="UD" style="width: 28px; height: 28px;" />
+				<font size="5"> U District</font><br>
+			<input name="Location" type="checkbox" value="UV" style="width: 28px; height: 28px;" />
+				<font size="5"> U Villiage</font><br>
+			<input name="Location" type="checkbox" value="45" style="width: 28px; height: 28px;" />
+				<font size="5"> 45th st</font><br>
+			<input name="Location" type="checkbox" value="Bellevue" style="width: 28px; height: 28px;" />
+				<font size="5"> Bellevue</font><br>
+			<input name="Location" type="checkbox" value="CT" style="width: 28px; height: 28px;" />
+				<font size="5"> China town</font><br>
+			<input name="Location" type="checkbox" value="DT" style="width: 28px; height: 28px;" />
+				<font size="5"> Downtown</font><br>
+			<input name="Location" type="checkbox" value="Amazon" style="width: 28px; height: 28px;" />
+				<font size="5"> Amazon Campus</font>
 		</div>
 		<button type="submit" class="btn btn-primary">pick</button>
 	</form>

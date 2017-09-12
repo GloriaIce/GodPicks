@@ -1,4 +1,6 @@
+ # -*- coding: utf-8 -*-
 import random
+import os
 
 def pick_food(locations):
 	locations_utf8 = []
@@ -6,9 +8,13 @@ def pick_food(locations):
 	for location in locations:
 		location = location.encode("utf-8")
 		locations_utf8.append(location)
-		food_list += [line.strip() for line in open(("data/" + location + ".txt"), 'r')]
-	print food_list
-	restaurant = food_list[random.randint(0, len(food_list) - 1)]
+		with open(os.path.join('data', '%s.txt' % location), 'rU') as f:
+			for line in f:
+				print line
+				food_list.append(line.strip())
+	for food in food_list:
+		print food
+	restaurant = random.choice(food_list)
 	return restaurant, len(food_list)
 
 def pick_activity():

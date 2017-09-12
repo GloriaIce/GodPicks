@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from flask import render_template, flash, redirect, url_for, request
 from app import app
 from .forms import LoginForm
@@ -16,7 +17,7 @@ def food():
 def showFoodResult():
     locations = request.args.getlist('Location')
     choice, number = pick_food(locations)
-    return render_template("food_result.html", title="Food picked!", choice=choice, number=number)
+    return render_template("food_result.html", title=u"选好了!", choice=choice.decode('utf-8'), number=number)
 
 @app.route('/activity')
 def activity():
