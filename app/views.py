@@ -11,13 +11,16 @@ def index(alias = 'GUEST'):
 
 @app.route('/food')
 def food():
-    return render_template("food.html", title = "food")
+    return render_template("food.html", title = "Food")
 
 @app.route('/result', methods = ['GET'])
 def showFoodResult():
     locations = request.args.getlist('Location')
-    choice, number = pick_food(locations)
-    return render_template("food_result.html", title=u"Picked!", choice=choice.decode('utf-8'), number=number)
+    if len(locations) == 0:
+        return render_template("food.html", title = "Food")
+    else:
+        choice, number = pick_food(locations)
+        return render_template("food_result.html", title=u"Picked!", choice=choice.decode('utf-8'), number=number)
 
 @app.route('/activity')
 def activity():
