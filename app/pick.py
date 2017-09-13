@@ -18,6 +18,10 @@ def pick_food(locations):
 	return restaurant, len(food_list)
 
 def pick_activity():
-	activities = [line.strip() for line in open(("data/activity.txt"), 'r')]
-	activity = activities[random.randint(0, len(activities) - 1)]
+	activities = []
+	with open(os.path.join('data', 'activity.txt'), 'rU') as f:
+			for line in f:
+				print line
+				activities.append(line.strip())
+	activity = random.choice(activities)
 	return activity

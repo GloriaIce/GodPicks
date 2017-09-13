@@ -22,7 +22,7 @@ def showFoodResult():
 @app.route('/activity')
 def activity():
     activity = pick_activity()
-    return render_template("activity.html", title = "activity", activity = activity)
+    return render_template("activity.html", title = "activity", activity = activity.decode('utf-8'))
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():

@@ -2,15 +2,16 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     {% if title %}
     <title>{{ title }}</title>
     {% else %}
-    <title>选择困难</title>
+    <title>God picks</title>
     {% endif %}
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="../../godpickstyle.css">
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
   </head>
   <body>
     <div class="container">
@@ -27,7 +28,6 @@
         </div>
       </nav>
     </div>
-
     <hr>
 
     <div class="container">
