@@ -17,12 +17,12 @@ def food():
 def showFoodResult():
     locations = request.args.getlist('Location')
     choice, number = pick_food(locations)
-    return render_template("food_result.html", title=u"选好了!", choice=choice.decode('utf-8'), number=number)
+    return render_template("food_result.html", title=u"Picked!", choice=choice.decode('utf-8'), number=number)
 
 @app.route('/activity')
 def activity():
     activity = pick_activity()
-    return render_template("activity.html", title = "activity", activity = activity.decode('utf-8'))
+    return render_template("activity.html", title = "Activity picked!", activity = activity.decode('utf-8'))
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
